@@ -2,22 +2,25 @@ import {useState} from 'react'
 import './Dropbar.css'
 
 
-function Dropbar({children, info}) {
+function Dropbar({children, info, title, addmore = false}) {
     const [show, setShow] = useState(false)
     function handleClick() {
         show == false ? setShow(true) : setShow(false)
     }
+    
     if (show == true) {
         return (
             <div className = "dropBar">
-                <p>hello : {children}</p>
-                <button onClick={handleClick}>hide</button>
+                <p>{title}: </p>
+                <p>{children}</p>
+                <button className="dropButton" onClick={handleClick}>hide</button>
             </div>
         )
     }
     return (
         <div className = "dropBar">
-            <button onClick = {handleClick}>show text</button>
+            <p>{title}: </p>
+            <button className  ="dropButton" onClick = {handleClick}>show</button>
         </div>
     )
 }

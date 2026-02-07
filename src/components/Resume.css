@@ -1,7 +1,17 @@
 .resumeText {
-    border: solid darkgrey 1px;
+    border: solid black 1px;
+    color: black;
 }
 
 .container {
+    aspect-ratio: 1/1.414;
+    height: 80vh;
+    background-color: #f6eee3;
     border: black solid 2px;
+    padding: 10px;
+    transform: scale(1vh)
+}
+
+.container>* {
+    color: black;
 }
